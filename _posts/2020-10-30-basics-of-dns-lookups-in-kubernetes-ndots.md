@@ -8,7 +8,7 @@ One of the fundamental technologies which are used in Kubernetes is DNS. Most of
 Worth noting is fact that Kubernetes have built-in service discovery mechanism. By default pods can communicate with each other using convention form `service-name.namespace.svc.cluster-domain.example` or `pod-name.namespace.pod.cluster-domain.example` (Services can be headless or not headless). This convention is just DNS A record assigned to resource at the time of creating. 
 
 ## DNS components for Kubernetes
-Nowadays the most popular DNS Server is CoreDNS. Mainly due to excellent integration with major cloud providers and countless amount of plugins which extends standard behaviour of that project.
+Nowadays the most popular DNS Server is CoreDNS. Mainly due to excellent integration with major cloud providers and countless amount of plugins which extends standard behaviour of that project. Another great thing is that CoreDNS not only supports TCP (used by default) and UDP, but also DoT, DoH and gRPC. 
 
 To make the next points understandable, I will describe briefly what is going on in runtime process of CoreDNS.
 * Pods and service of CoreDNS are deployed
