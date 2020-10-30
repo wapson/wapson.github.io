@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basics of DNS lookups in Kubernetes - ndots
+title: The basics of DNS lookups in Kubernetes - ndots
 ---
 
 One of the fundamental technologies which are used in Kubernetes is DNS. Most of the components and concepts in this ecosystem rely on lookups provided by it. In this post I'll try to explain a little bit a whole process and point out some common configuration issues.
