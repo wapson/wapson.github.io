@@ -35,7 +35,7 @@ If each of the iterations result with `NXDOMAIN` then Kubernetes will perform in
 Fortunately Kubernetes provided one more solution to omit local searches. As I mentioned earlier, `ndots` is an minimal value of dots in DNS query to be recognized by Kubernetes as FQDN. By default `ndots` value is set on `5` and if you think about it seems as pretty high value. Indeed, it's high but it's done in that way to ensure that all of the local lookups will reach desired target. If you take the look into form convention of services and pods you will notice that it contains up to 4 dots.  
 
 ## Reduce NXDOMAIN errors
-Over time, clusters grow, so at the same time number of queries to DNS grow. If most of your traffic is external it means that probably 3/4 or 4/5 (depends on number of entries in search section of resolv.conf) will result with `NXDOMAIN` due to fact that most of the domains contains only one dot (so local lookups will be performed). In situation like this it can be fixed on two different ways.
+Over time, clusters grow, so at the same time number of queries to DNS grow. If most of your traffic is external it means that probably 3/4 or 4/5 (depends on number of entries in search section of resolv.conf) will result with `NXDOMAIN` due to fact that most of the domains contains only one dot (so local lookups will be performed). In situation like this it can be fixed in two different ways.
 
 1. Append at the end of each external request `.`
 2. Change the `ndots` value for your pod using `dnsConfig`
