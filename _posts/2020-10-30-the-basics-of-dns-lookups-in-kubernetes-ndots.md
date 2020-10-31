@@ -47,6 +47,9 @@ dnsConfig:
       value: "2"
 ```
 
+## Summary
+I hope this little blog post have given a simple explanation of how valuable is proper configuration of ndots. Good action point for every engineer who works with Kubernetes can be a simple check of performed by their microservices DNS queries to find out, if there is a need to adjust pod `dnsConfig` 
+
 ## Further Readings
 * [Overview of Kubernetes DNS support](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 * [Specification for DNS-based Kubernetes service discovery](https://github.com/kubernetes/dns/blob/master/docs/specification.md)
